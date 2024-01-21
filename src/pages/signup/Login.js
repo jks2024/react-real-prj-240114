@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Container, Items } from "../../component/LoginComponent";
+import { Container, Items } from "../../style/LoginStyle";
 import Input from "../../component/Input";
 import Button from "../../component/Button";
 import styled from "styled-components";
 import imgLogo from "../../images/kakaoLion.png";
 import AxiosApi from "../../api/AxiosApi";
+import Modal from "../../component/Modal"; // 제어권을 가지고 있는 팝업
+
 const Img = styled.img`
   width: 120px;
   object-fit: cover;
@@ -18,6 +20,15 @@ const Login = () => {
   // 유효성 검사
   const [isEmail, setIsEmail] = useState(""); // 이메일 입력 여부
   const [isPw, setIsPw] = useState(""); // 패스워드 입력 여부
+
+  // 모달 내용을 변경
+  const [modalContent, setModalContent] = useState("");
+  // 모달 팝업 처리
+  const [modalOpen, setModalOpen] = useState(false); // 초기값은 닫힌 상태
+  const closeModal = () => {
+    // 모달을 닫는 함수
+    setModalOpen(false);
+  };
 
   const navigate = useNavigate();
 
@@ -40,10 +51,14 @@ const Login = () => {
         localStorage.setItem("isLogin", "TRUE");
         navigate("/home");
       } else {
-        alert("로그인 실패");
+        // 서버의 응답을 줬지만 성공이 아닌 경우
+        setModalOpen(true);
+        setModalContent("아이디 및 패스워드를 재 확인 해 주세요.");
       }
     } catch (e) {
-      console.log(e);
+      // 서버가 응답하지 않는 경우
+      setModalOpen(true);
+      setModalContent("서버가 응답하지 않습니다.");
     }
   };
 
@@ -76,6 +91,9 @@ const Login = () => {
           <Button disabled>SIGN IN</Button>
         )}
       </Items>
+      <Modal open={modalOpen} close={closeModal} header="오류">
+        {modalContent}
+      </Modal>
     </Container>
   );
 };

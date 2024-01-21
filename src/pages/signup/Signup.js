@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import AxiosApi from "../../api/AxiosApi";
 import Input from "../../component/Input";
 import Button from "../../component/Button";
-import { Container, Items } from "../../component/LoginComponent";
+import { Container, Items } from "../../style/LoginStyle";
 import Modal from "../../component/Modal";
 // 이메일 입력시 서버와 통신해서 가입된 이메일인지 실시간 확인 하기
 // 모달 박스는 우선 넣지 말고 alert 팝업으로 띄우고 가능하면 추가하기

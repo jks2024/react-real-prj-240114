@@ -23,6 +23,9 @@ const AxiosApi = {
     };
     return await axios.post(EZEN_DOMAIN + "/auth/signup", member);
   },
+  membersGet: async () => {
+    return await axios.get(EZEN_DOMAIN + "/users/list");
+  },
 };
 
 export default AxiosApi;
