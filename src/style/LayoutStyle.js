@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // 색상 상수 정의
 const defaultBackgroundColor = "#f9aa06";
 const sideMenuBackgroundColor = "#eee";
+const topbarHeight = "54px";
 
 // 컨테이너 스타일드 컴포넌트
 export const Container = styled.div`
@@ -20,29 +21,31 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     position: fixed;
-    height: 54px;
+    height: ${topbarHeight};
     width: 100%;
     background-color: ${(props) => props.color || defaultBackgroundColor};
     z-index: 100;
     top: 0;
     left: 0;
 
-    .logo2 {
+    .hambeger {
       margin-top: 12px;
       margin-left: 34px;
     }
-    .bell {
+    .welcome {
+      margin-top: 160px;
+    }
+    .current-temp {
+      margin-top: 120px;
+      margin-left: 34px;
+    }
+    .setting {
       margin-top: 12px;
       margin-right: 34px;
     }
   }
-  .bdlogo {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    justify-content: center;
+  .mainbody {
+    height: calc(100vh - ${topbarHeight} - 50px);
   }
 `;
 
@@ -50,8 +53,9 @@ export const Container = styled.div`
 export const StyledSideMenu = styled.div`
   position: fixed;
   left: 0;
+  top: ${topbarHeight};
   width: 250px;
-  height: 100%;
+  height: calc(100vh - ${topbarHeight});
   background-color: ${sideMenuBackgroundColor};
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
   z-index: 1000;
@@ -88,5 +92,5 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Dummy = styled.div`
-  height: 54px;
+  height: ${topbarHeight};
 `;

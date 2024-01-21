@@ -10,7 +10,7 @@ import {
 } from "../style/LayoutStyle";
 import { useState } from "react"; // 상태 관린
 import { useNavigate } from "react-router-dom"; // 페이지 이동
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
 import { FiSettings } from "react-icons/fi";
 import { LuListTodo } from "react-icons/lu";
 import { FaHome, FaClipboardList, FaRegNewspaper } from "react-icons/fa";
@@ -30,10 +30,14 @@ const Layout = () => {
   return (
     <Container>
       <header className="mainhead">
-        <div className="logo2">
-          <GiHamburgerMenu size={32} color="white" onClick={onClickLeft} />
+        <div className="hambeger">
+          {isMenuOpen ? (
+            <GiCancel size={32} color="white" onClick={onClickLeft} />
+          ) : (
+            <GiHamburgerMenu size={32} color="white" onClick={onClickLeft} />
+          )}
         </div>
-        <div className="bell">
+        <div className="setting">
           <FiSettings size={32} color="white" onClick={onClickRight} />
         </div>
         <StyledSideMenu
