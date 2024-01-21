@@ -26,6 +26,9 @@ const AxiosApi = {
   membersGet: async () => {
     return await axios.get(EZEN_DOMAIN + "/users/list");
   },
+  memberGetOne: async (email) => {
+    return await axios.get(EZEN_DOMAIN + `/users/detail/${email}`);
+  },
 };
 
 export default AxiosApi;

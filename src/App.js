@@ -6,6 +6,7 @@ import Signup from "./pages/signup/Signup";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import Members from "./pages/member/Members";
+import MemberInfo from "./pages/member/MemberInfo";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/Home" element={<Home />} />
             <Route path="/Members" element={<Members />} />
+            <Route path="/MemberInfo/:email" element={<MemberInfo />} />
           </Route>
         </Routes>
       </Router>
