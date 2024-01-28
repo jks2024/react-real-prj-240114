@@ -16,6 +16,12 @@ const Home = () => {
       case 3:
         navigate("/category");
         break;
+      case 4:
+        navigate("/themesetting");
+        break;
+      case 5:
+        navigate("/category");
+        break;
       default:
     }
   };
@@ -26,6 +32,8 @@ const Home = () => {
         <TransBtn onClick={() => onClickBtn(1)}>회원리스트</TransBtn>
         <TransBtn onClick={() => onClickBtn(2)}>게시판</TransBtn>
         <TransBtn onClick={() => onClickBtn(3)}>카테고리</TransBtn>
+        <TransBtn onClick={() => onClickBtn(4)}>테마 설정</TransBtn>
+        <TransBtn onClick={() => onClickBtn(5)}>카테고리 설정</TransBtn>
       </ButtonContainer>
     </div>
   );

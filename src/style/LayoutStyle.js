@@ -49,6 +49,26 @@ export const Container = styled.div`
   }
 `;
 
+export const UserContainer = styled.div`
+  display: flex;
+  margin: 40px 20px;
+`;
+
+export const UserImage = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+`;
+export const UserIdAndName = styled.div`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin: 2px 10px;
+  line-height: 1.5;
+`;
+
 // 사이드 메뉴 스타일드 컴포넌트
 export const StyledSideMenu = styled.div`
   position: fixed;
