@@ -79,7 +79,8 @@ const MemberInfo = () => {
       try {
         const rsp = await AxiosApi.memberGetOne(email); // 회원 정보 가져오기
         setMember(rsp.data);
-        setImgUrl(rsp.data.image);
+        setEditName(rsp.data.name);
+        setUrl(rsp.data.image);
       } catch (e) {
         console.log(e);
       }
@@ -111,10 +112,10 @@ const MemberInfo = () => {
       if (rsp.status === 200) {
         setEditMode(false); // 수정을 비활성화
         setEditName(editName);
-        setUrl(url);
         const rsp = await AxiosApi.memberGetOne(email); // 수정 이후 조회
         setMember(rsp.data);
         setName(rsp.data.name);
+        setUrl(rsp.data.image);
         setImgUrl(rsp.data.image);
       }
     } catch (e) {
