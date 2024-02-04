@@ -26,7 +26,7 @@ const Layout = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // 사이드바 메뉴 열기/닫기
   const navigate = useNavigate(); // 페이지 이동
   const context = useContext(UserContext);
-  const { color, name } = context; // 컬러와 이름을 전역 상태 관리에서 가져 옴
+  const { color, name, imgUrl } = context; // 컬러와 이름을 전역 상태 관리에서 가져 옴
   const email = localStorage.getItem("email");
   const [member, setMember] = useState("");
 
@@ -48,7 +48,7 @@ const Layout = () => {
       }
     };
     getMember();
-  }, [name]);
+  }, [name, imgUrl]);
 
   return (
     <Container color={color}>
