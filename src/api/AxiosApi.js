@@ -58,6 +58,21 @@ const AxiosApi = {
       EZEN_DOMAIN + `/api/category/delete/${categoryId}`
     );
   },
+  // 게시글 목록 가져오기
+  boardList: async () => {
+    return await axios.get(EZEN_DOMAIN + "/api/board/list");
+  },
+  // 게시글 쓰기 email, title, selectedCategory, content, url
+  boardWrite: async (email, title, selectedCategory, content, url) => {
+    const board = {
+      title: title,
+      content: content,
+      categoryId: selectedCategory,
+      email: email,
+      img: url,
+    };
+    return await axios.post(EZEN_DOMAIN + "/api/board/new", board);
+  },
 };
 
 export default AxiosApi;
