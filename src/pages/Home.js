@@ -28,6 +28,9 @@ const Home = () => {
       case 7:
         navigate("/KakaoMap");
         break;
+      case 8:
+        navigate("/PieChat");
+        break;
       default:
     }
   };
@@ -42,6 +45,7 @@ const Home = () => {
         <TransBtn onClick={() => onClickBtn(5)}>카테고리 설정</TransBtn>
         <TransBtn onClick={() => onClickBtn(6)}>채팅</TransBtn>
         <TransBtn onClick={() => onClickBtn(7)}>카카오맵</TransBtn>
+        <TransBtn onClick={() => onClickBtn(8)}>파이 챠트</TransBtn>
       </ButtonContainer>
     </div>
   );

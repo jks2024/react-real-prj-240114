@@ -17,6 +17,7 @@ import ChatList from "./pages/chatting/ChatList";
 import ChatRoomCreate from "./pages/chatting/ChatRoomCreate";
 import Chatting from "./pages/chatting/Chatting";
 import KakaoMap from "./pages/KakaoMap";
+import BloodPieChart from "./pages/PieChat";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
               <Route path="/Chat-create" element={<ChatRoomCreate />} />
               <Route path="Chatting/:roomId" element={<Chatting />} />
               <Route path="KakaoMap" element={<KakaoMap />} />
+              <Route path="PieChat" element={<BloodPieChart />} />
             </Route>
           </Routes>
         </Router>
