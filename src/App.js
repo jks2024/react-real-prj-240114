@@ -12,6 +12,7 @@ import ThemeSetting from "./pages/setting/ThemeSetting";
 import Category from "./pages/board/Category";
 import Boards from "./pages/board/Boards";
 import BoardWrite from "./pages/board/BoardWrite";
+import BoardDetail from "./pages/board/BoardDetail";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
               <Route path="/Category" element={<Category />} />
               <Route path="/Boards" element={<Boards />} />
               <Route path="/BoardWrite" element={<BoardWrite />} />
-              {/* <Route path="/BoardDetail/:id" element={<BoardDetail />} /> */}
+              <Route path="/BoardDetail/:id" element={<BoardDetail />} />
             </Route>
           </Routes>
         </Router>

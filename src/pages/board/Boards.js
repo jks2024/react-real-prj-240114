@@ -5,6 +5,10 @@ import styled from "styled-components"; // 화면 스타일링
 import { useNavigate } from "react-router-dom"; // 화면 라우터 이동
 import BoardList from "./BoardList";
 
+// 카테고리 선택메뉴
+// 게시글 목록
+// 게시글 쓰기
+
 const BoardContainer = styled.div`
   padding: 0 30px;
   position: relative;
