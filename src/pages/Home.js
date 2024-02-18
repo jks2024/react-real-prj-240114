@@ -22,6 +22,9 @@ const Home = () => {
       case 5:
         navigate("/category");
         break;
+      case 6:
+        navigate("/Chat");
+        break;
       default:
     }
   };
@@ -34,6 +37,7 @@ const Home = () => {
         <TransBtn onClick={() => onClickBtn(3)}>카테고리</TransBtn>
         <TransBtn onClick={() => onClickBtn(4)}>테마 설정</TransBtn>
         <TransBtn onClick={() => onClickBtn(5)}>카테고리 설정</TransBtn>
+        <TransBtn onClick={() => onClickBtn(6)}>채팅</TransBtn>
       </ButtonContainer>
     </div>
   );

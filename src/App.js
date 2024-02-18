@@ -13,6 +13,9 @@ import Category from "./pages/board/Category";
 import Boards from "./pages/board/Boards";
 import BoardWrite from "./pages/board/BoardWrite";
 import BoardDetail from "./pages/board/BoardDetail";
+import ChatList from "./pages/chatting/ChatList";
+import ChatRoomCreate from "./pages/chatting/ChatRoomCreate";
+import Chatting from "./pages/chatting/Chatting";
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
               <Route path="/Boards" element={<Boards />} />
               <Route path="/BoardWrite" element={<BoardWrite />} />
               <Route path="/BoardDetail/:id" element={<BoardDetail />} />
+              <Route path="/Chat" element={<ChatList />} />
+              <Route path="/Chat-create" element={<ChatRoomCreate />} />
+              <Route path="Chatting/:roomId" element={<Chatting />} />
             </Route>
           </Routes>
         </Router>

@@ -2,6 +2,7 @@ import axios from "axios";
 const EZEN_DOMAIN = "http://localhost:8111";
 
 const AxiosApi = {
+  SOCKET_URL: "ws://localhost:8111/ws/chat",
   // 로그인
   memberLogin: async (email, pw) => {
     const login = {
@@ -93,6 +94,22 @@ const AxiosApi = {
       content: input,
     };
     return await axios.post(EZEN_DOMAIN + "/api/comment/new", comment);
+  },
+  // 채팅방 리스트 가져오기
+  chatList: async () => {
+    return await axios.get(EZEN_DOMAIN + "/chat/list");
+  },
+  // 채팅방 생성하기
+  chatCreate: async (email, name) => {
+    const chat = {
+      email: email,
+      name: name,
+    };
+    return await axios.post(EZEN_DOMAIN + "/chat/new", chat);
+  },
+  // 채팅방 정보 가져 오기
+  chatDetail: async (roomId) => {
+    return await axios.get(EZEN_DOMAIN + `/chat/room/${roomId}`);
   },
 };
 

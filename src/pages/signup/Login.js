@@ -47,7 +47,7 @@ const Login = () => {
       const rsp = await AxiosApi.memberLogin(inputEmail, inputPw);
       console.log(rsp.data);
       if (rsp.data) {
-        localStorage.setItem("email", inputEmail);
+        localStorage.setItem("email", inputEmail); // 저장
         localStorage.setItem("isLogin", "TRUE");
         navigate("/home");
       } else {
