@@ -25,6 +25,9 @@ const Home = () => {
       case 6:
         navigate("/Chat");
         break;
+      case 7:
+        navigate("/KakaoMap");
+        break;
       default:
     }
   };
@@ -38,6 +41,7 @@ const Home = () => {
         <TransBtn onClick={() => onClickBtn(4)}>테마 설정</TransBtn>
         <TransBtn onClick={() => onClickBtn(5)}>카테고리 설정</TransBtn>
         <TransBtn onClick={() => onClickBtn(6)}>채팅</TransBtn>
+        <TransBtn onClick={() => onClickBtn(7)}>카카오맵</TransBtn>
       </ButtonContainer>
     </div>
   );

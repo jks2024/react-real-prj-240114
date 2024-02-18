@@ -16,6 +16,7 @@ import BoardDetail from "./pages/board/BoardDetail";
 import ChatList from "./pages/chatting/ChatList";
 import ChatRoomCreate from "./pages/chatting/ChatRoomCreate";
 import Chatting from "./pages/chatting/Chatting";
+import KakaoMap from "./pages/KakaoMap";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
               <Route path="/Chat" element={<ChatList />} />
               <Route path="/Chat-create" element={<ChatRoomCreate />} />
               <Route path="Chatting/:roomId" element={<Chatting />} />
+              <Route path="KakaoMap" element={<KakaoMap />} />
             </Route>
           </Routes>
         </Router>
