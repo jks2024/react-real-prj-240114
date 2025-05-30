@@ -1,5 +1,6 @@
 import axios from "axios";
-const EZEN_DOMAIN = "http://localhost:8111";
+//const EZEN_DOMAIN = "http://localhost:8111";
+const EZEN_DOMAIN = "http://222.117.237.119:8111";
 
 const AxiosApi = {
   SOCKET_URL: "ws://localhost:8111/ws/chat",
@@ -110,6 +111,10 @@ const AxiosApi = {
   // 채팅방 정보 가져 오기
   chatDetail: async (roomId) => {
     return await axios.get(EZEN_DOMAIN + `/chat/room/${roomId}`);
+  },
+  // 카카오 xhrms
+  kakao: async (token) => {
+    return await axios.post(EZEN_DOMAIN + `/api/social`, token);
   },
 };
 

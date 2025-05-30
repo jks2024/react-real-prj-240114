@@ -5,6 +5,10 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <meta property="og:title" content="Your Page Title" />
+    <meta property="og:description" content="Your Page Description" />
+    <meta property="og:image" content="URL of Your Page Image" />
+    <meta property="og:url" content="URL of Your Page" />
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -24,10 +28,15 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=582a7d0c4dad7aea46787c4771850825&libraries=services"></script>
     <script
       type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=542f53920561e0ba6f74f87e6d7eb74b&libraries=services"
+      src="https://developers.kakao.com/sdk/js/kakao.js"
     ></script>
+    <script>
+      window.Kakao.init("262d385cf93555bb7abf3ee6769ddeea");
+    </script>
     <title>React App</title>
   </head>
   <body>
